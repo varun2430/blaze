@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Switch, Route, HashRouter } from "react-router-dom";
+import NavBar from './component/NavBar';
+import home from './page/home';
+import bmi_cal from './page/bmi_cal';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <HashRouter>
+
+      <div className="App">
+
+        <NavBar />
+
+        <Switch>
+
+          <Route path="/" component={home} exact />
+          <Route path="/bmi_calculator" component={bmi_cal} exact />
+        </Switch>
+
+      </div>
+
+    </HashRouter>
   );
 }
 
