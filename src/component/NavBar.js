@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
@@ -7,7 +8,9 @@ const NavBar = () => {
 
                 <div className="container-fluid">
 
-                    <a className="navbar-brand" href="/">Blaze</a>
+                    <h4>
+                        <Link className="navbar-brand" to="/">Blaze</Link>
+                    </h4>
 
                 </div>
 
