@@ -1,3 +1,4 @@
+import Jumbotron from "../component/Jumbotron"
 
 const BmrCal = () => {
 
@@ -5,9 +6,7 @@ const BmrCal = () => {
 
         <>
             
-            <div className="container-fluid my-3 mx-2">
-                <h3>Bmr Calculator</h3>
-            </div>
+            <Jumbotron title="Bmr Calculator" text="Basal metabolic rate (BMR) is the rate of energy expenditure per unit time by endothermic animals at rest. It is reported in energy units per unit time ranging from watt (joule/second) to ml O2/min or joule per hour per kg body mass J/(h·kg)." />
 
             <div className="row m-1">
 

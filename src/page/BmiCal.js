@@ -1,4 +1,6 @@
 import { useState } from "react"
+import Jumbotron from "../component/Jumbotron";
+import Suggestion from "../component/Suggestion";
 
 const BmiCal = () => {
 
@@ -7,12 +9,60 @@ const BmiCal = () => {
     const [height, setHeight] = useState("");
     const [weight, setWeight] = useState("");
     const [bmi, setBmi] = useState("");
+    const [condition, setCondition] = useState("");
 
     const calculateBmi = (e) => {
 
         e.preventDefault();
 
-        setBmi( ( ( weight/( height * height ) )*10000 ).toFixed(1) );
+        let temp = ( ( weight/( height * height ) )*10000 ).toFixed(1);
+
+        setBmi(temp);
+
+        calculateCondition(parseFloat(temp));
+    }
+
+    const calculateCondition = (fbmi) => {
+
+        if (gender === "male" || gender === "female") {
+
+            switch(true) {
+                
+                case (fbmi < 16):
+                    setCondition("Severe Thinness");
+                    break;
+
+                case (fbmi >= 16 && fbmi <= 17):
+                    setCondition("Moderate Thinness");
+                    break;
+
+                case (fbmi >= 17 && fbmi <= 18.5):
+                    setCondition("Mild Thinness");
+                    break;
+                
+                case (fbmi >= 18.5 && fbmi <= 25):
+                    setCondition("Normal");
+                    break;
+
+                case (fbmi >= 25 && fbmi <= 30):
+                    setCondition("Overweight");
+                    break;
+
+                case (fbmi >= 30 && fbmi <= 35):
+                    setCondition("Obese Class I");
+                    break;
+
+                case (fbmi >= 35 && fbmi <= 40):
+                    setCondition("Obese Class II");
+                    break;
+
+                default :
+                    setCondition("Obese Class III");
+                    break;
+
+            }
+            
+        }
     }
 
     const clearInput = (e) => {
@@ -22,19 +72,18 @@ const BmiCal = () => {
         setHeight("");
         setWeight("");
         setBmi("");
+
     }
 
     return (
 
         <>
 
-            <div className="container-fluid my-3 mx-2">
-                <h3>Bmi Calculator</h3>
-            </div>
+            <Jumbotron title="Bmi Calculator" text="Body mass index (BMI) is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres." />
 
             <div className="row m-1">
 
-                <div className="col">
+                <div className="col-md">
 
                     <div className="container-fluid h-100 border">
                         
@@ -59,10 +108,10 @@ const BmiCal = () => {
                                 </div>
 
                                 <div className="col m-2 pt-2">
-                                    <input type="radio" id="male" name="gender" onChange={(e) => setGender(e.target.id)} required />
+                                    <input style={{margin:"15px"}} type="radio" value="male" name="gender" onChange={(e) => setGender(e.target.value)} required />
                                     <label for="male">Male</label>
 
-                                    <input type="radio" id="female" name="gender" onChange={(e) => setGender(e.target.id)} required />
+                                    <input style={{margin:"15px"}} type="radio" value="female" name="gender" onChange={(e) => setGender(e.target.value)} required />
                                     <label for="female">Female</label>
                                 </div>
 
@@ -110,7 +159,7 @@ const BmiCal = () => {
 
                 </div>
 
-                <div className="col">
+                <div className="col-md">
 
                     <div className="container-fluid h-100 border">
 
@@ -118,6 +167,7 @@ const BmiCal = () => {
 
                             <div className="col mx-3 pt-3">
                                 <h4 style={{textAlign:"center"}}>Result = {bmi} Kg/m<sup>2</sup></h4>
+                                <h4 style={{textAlign:"center"}}>Condition = {condition}</h4>
                             </div>
 
                         </div>
@@ -127,6 +177,8 @@ const BmiCal = () => {
                 </div>
 
             </div>
+
+            <Suggestion text="" />
 
         </>
 
