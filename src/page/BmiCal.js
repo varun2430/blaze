@@ -15,54 +15,49 @@ const BmiCal = () => {
 
         e.preventDefault();
 
-        let temp = ( ( weight/( height * height ) )*10000 ).toFixed(1);
+        let temp_bmi = parseFloat( ( ( weight/( height * height ) )*10000 ).toFixed(1) );
+        let temp_condition = "";
 
-        setBmi(temp);
+        setBmi(temp_bmi);
 
-        calculateCondition(parseFloat(temp));
-    }
-
-    const calculateCondition = (fbmi) => {
-
-        if (gender === "male" || gender === "female") {
-
-            switch(true) {
+        switch(true) {
                 
-                case (fbmi < 16):
-                    setCondition("Severe Thinness");
-                    break;
+             case (temp_bmi < 16):
+                temp_condition = "Severe Thinness";
+                break;
 
-                case (fbmi >= 16 && fbmi <= 17):
-                    setCondition("Moderate Thinness");
-                    break;
+            case (temp_bmi >= 16 && temp_bmi <= 17):
+                temp_condition = "Moderate Thinness";
+                break;
 
-                case (fbmi >= 17 && fbmi <= 18.5):
-                    setCondition("Mild Thinness");
-                    break;
+            case (temp_bmi >= 17 && temp_bmi <= 18.5):
+                temp_condition = "Mild Thinness";
+                break;
                 
-                case (fbmi >= 18.5 && fbmi <= 25):
-                    setCondition("Normal");
-                    break;
+            case (temp_bmi >= 18.5 && temp_bmi <= 25):
+                temp_condition = "Normal";
+                break;
 
-                case (fbmi >= 25 && fbmi <= 30):
-                    setCondition("Overweight");
-                    break;
+            case (temp_bmi >= 25 && temp_bmi <= 30):
+                temp_condition = "Overweight";
+                break;
 
-                case (fbmi >= 30 && fbmi <= 35):
-                    setCondition("Obese Class I");
-                    break;
+            case (temp_bmi >= 30 && temp_bmi <= 35):
+                temp_condition = "Obese Class I";
+                break;
 
-                case (fbmi >= 35 && fbmi <= 40):
-                    setCondition("Obese Class II");
-                    break;
+            case (temp_bmi >= 35 && temp_bmi <= 40):
+                temp_condition = "Obese Class II";
+                break;
 
-                default :
-                    setCondition("Obese Class III");
-                    break;
+            default :
+                temp_condition = "Obese Class III";
+                break;
 
-            }
-            
         }
+
+        setCondition(temp_condition);
+
     }
 
     const clearInput = (e) => {
@@ -72,6 +67,7 @@ const BmiCal = () => {
         setHeight("");
         setWeight("");
         setBmi("");
+        setCondition("");
 
     }
 
@@ -92,7 +88,7 @@ const BmiCal = () => {
                             <div className="row">
 
                                 <div className="col mx-2 pt-3">
-                                    <label className="form-label" for="age">Age</label>
+                                    <label className="form-label" htmlFor="age">Age</label>
                                 </div>
 
                                 <div className="col m-2">
@@ -109,10 +105,10 @@ const BmiCal = () => {
 
                                 <div className="col m-2 pt-2">
                                     <input style={{margin:"15px"}} type="radio" value="male" name="gender" onChange={(e) => setGender(e.target.value)} required />
-                                    <label for="male">Male</label>
+                                    <label htmlFor="male">Male</label>
 
                                     <input style={{margin:"15px"}} type="radio" value="female" name="gender" onChange={(e) => setGender(e.target.value)} required />
-                                    <label for="female">Female</label>
+                                    <label htmlFor="female">Female</label>
                                 </div>
 
                             </div>
@@ -120,7 +116,7 @@ const BmiCal = () => {
                             <div className="row">
 
                                 <div className="col mx-2 pt-3">
-                                    <label className="form-label" for="height">Height</label>
+                                    <label className="form-label" htmlFor="height">Height</label>
                                 </div>
 
                                 <div className="col m-2">
@@ -132,7 +128,7 @@ const BmiCal = () => {
                             <div className="row">
 
                                 <div className="col mx-2 pt-3">
-                                    <label className="form-label" for="weight">Weight</label>
+                                    <label className="form-label" htmlFor="weight">Weight</label>
                                 </div>
 
                                 <div className="col m-2">
@@ -184,5 +180,6 @@ const BmiCal = () => {
 
     )
 }
+
 
 export default BmiCal
