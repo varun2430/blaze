@@ -4,9 +4,9 @@ const Suggestion = (props) => {
     return (
         <>
 
-            <div className="row m-3 p-3 border">
+            <div className="row m-3 p-3 border border-2 rounded">
                 <h3>Suggestion:</h3>
-                <p style={{margin:"10px"}}>{props.text}</p>
+                <h5 style={{margin:"10px"}}>{props.text}</h5>
             </div>
             
         </>
