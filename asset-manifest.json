@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/blaze/static/js/main.bad95f86.chunk.js",
-    "main.js.map": "/blaze/static/js/main.bad95f86.chunk.js.map",
+    "main.js": "/blaze/static/js/main.f4160b0c.chunk.js",
+    "main.js.map": "/blaze/static/js/main.f4160b0c.chunk.js.map",
     "runtime-main.js": "/blaze/static/js/runtime-main.263c9cd3.js",
     "runtime-main.js.map": "/blaze/static/js/runtime-main.263c9cd3.js.map",
-    "static/js/2.b79ae50a.chunk.js": "/blaze/static/js/2.b79ae50a.chunk.js",
-    "static/js/2.b79ae50a.chunk.js.map": "/blaze/static/js/2.b79ae50a.chunk.js.map",
+    "static/js/2.9dc7cd88.chunk.js": "/blaze/static/js/2.9dc7cd88.chunk.js",
+    "static/js/2.9dc7cd88.chunk.js.map": "/blaze/static/js/2.9dc7cd88.chunk.js.map",
     "index.html": "/blaze/index.html",
-    "static/js/2.b79ae50a.chunk.js.LICENSE.txt": "/blaze/static/js/2.b79ae50a.chunk.js.LICENSE.txt"
+    "static/js/2.9dc7cd88.chunk.js.LICENSE.txt": "/blaze/static/js/2.9dc7cd88.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.263c9cd3.js",
-    "static/js/2.b79ae50a.chunk.js",
-    "static/js/main.bad95f86.chunk.js"
+    "static/js/2.9dc7cd88.chunk.js",
+    "static/js/main.f4160b0c.chunk.js"
   ]
 }
