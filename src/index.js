@@ -5,6 +5,7 @@ import NavBar from './component/NavBar';
 import Home from './page/Home';
 import BmiCal from './page/BmiCal';
 import BmrCal from './page/BmrCal';
+import BfpCal from './page/BfpCal';
 
 ReactDOM.render(
 
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Route path="/" component={Home} exact />
         <Route path="/bmi_calculator" component={BmiCal} exact />
         <Route path="/bmr_calculator" component={BmrCal} exact />
+        <Route path="/bfp_calculator" component={BfpCal} exact />
 
       </Switch>
 

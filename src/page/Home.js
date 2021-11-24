@@ -51,6 +51,26 @@ const Home = () => {
                     </div>
                   </div>
 
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <b>Body Fat Percentage</b>
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionhome">
+                      <div class="accordion-body">
+                        The <strong>body fat percentage</strong> of a human or other living being is the total mass of fat divided by total body mass, multiplied by 100; body fat includes essential body fat and storage body fat. Essential is necessary to maintain life and reproductive functions. The percentage of essential body fat for women is greater than that for men, due to the demands of childbearing and other hormonal functions. Storage body fat consists of fat accumulation in adipose tissue, part of which protects internal organs in the chest and abdomen. The body fat percentage is a measure of fitness level, since it is the only body measurement which directly calculates a person's relative body composition without regard to height or weight.
+                        <br />
+                        <br />
+                        <h6 style={{textAlign:"center"}}>
+                            <Link to="/bfp_calculator">
+                               <input className="btn btn-primary" style={{textAlign:"center"}} type="button" value="BODY FAT CALCULATOR" />
+                            </Link>
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
             </div>
