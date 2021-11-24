@@ -20,6 +20,7 @@ const Home = () => {
                             <br />
                             The BMI is a convenient rule of thumb used to broadly categorize a person as underweight, normal weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and height. Major adult BMI classifications are underweight (under 18.5 kg/m2), normal weight (18.5 to 24.9), overweight (25 to 29.9), and obese (30 or more). When used to predict an individual's health, rather than as a statistical measurement for groups, the BMI has limitations that can make it less useful than some of the alternatives, especially when applied to individuals with abdominal obesity, short stature, or unusually high muscle mass.
                             <br />
+                            <br />
                             <h6 style={{textAlign:"center"}}>
                                 <Link to="/bmi_calculator">
                                    <input className="btn btn-primary" style={{textAlign:"center"}} type="button" value="BMI CALCULATOR" />
