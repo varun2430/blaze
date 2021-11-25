@@ -26,15 +26,15 @@ const BmrCal = () => {
 
         e.preventDefault();
 
-        let temp_bmr
+        let temp_bmr;
 
         if(gender === "male")
         {
-            temp_bmr = parseFloat( 10*weight + 6.25*height - 5*age + 5 );
+            temp_bmr = parseFloat( (10*weight + 6.25*height - 5*age + 5).toFixed(1) );
         }
         else
         {
-            temp_bmr = parseFloat( 10*weight + 6.25*height - 5*age - 161 );
+            temp_bmr = parseFloat( (10*weight + 6.25*height - 5*age - 161).toFixed(1) );
         }
 
         setBmr(temp_bmr);
