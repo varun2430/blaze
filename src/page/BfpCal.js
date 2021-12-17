@@ -13,7 +13,6 @@ const BfpCal = () => {
     const [waist, setWaist] = useState("");
     const [hip, setHip] = useState("");
     const [bfp, setBfp] = useState("");
-    const [condition, setCondition] = useState("");
     const [suggestion, setSuggestion] = useState("");
 
     const calculateBfp = (e) => {
@@ -51,7 +50,6 @@ const BfpCal = () => {
         setWaist("");
         setHip("");
         setBfp("");
-        setCondition("");
         setSuggestion("");
 
     }
@@ -183,11 +181,7 @@ const BfpCal = () => {
 
                             <div className="col mx-3 pt-3">
                                 <br />
-                                <br />
                                 <h4 style={{textAlign:"center"}}>Result = {bfp} %</h4>
-                                <br />
-                                <h4 style={{textAlign:"center"}}>Condition = {condition}</h4>
-                                <br />
                                 <br />
                             </div>
 
