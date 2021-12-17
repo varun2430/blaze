@@ -15,7 +15,7 @@ const NavBar = () => {
 
                     <h4>
                         <a className="navbar-brand" href="https://github.com/varun2430/blaze" target="_blank" rel="noreferrer">
-                            <i class="fa fa-github"></i>
+                            <i className="fa fa-github"></i>
                         </a>
                     </h4>
             
