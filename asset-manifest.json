@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/blaze/static/js/main.6a9d5654.chunk.js",
-    "main.js.map": "/blaze/static/js/main.6a9d5654.chunk.js.map",
+    "main.js": "/blaze/static/js/main.7964a06e.chunk.js",
+    "main.js.map": "/blaze/static/js/main.7964a06e.chunk.js.map",
     "runtime-main.js": "/blaze/static/js/runtime-main.263c9cd3.js",
     "runtime-main.js.map": "/blaze/static/js/runtime-main.263c9cd3.js.map",
     "static/js/2.eb94be41.chunk.js": "/blaze/static/js/2.eb94be41.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.263c9cd3.js",
     "static/js/2.eb94be41.chunk.js",
-    "static/js/main.6a9d5654.chunk.js"
+    "static/js/main.7964a06e.chunk.js"
   ]
 }
