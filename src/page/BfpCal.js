@@ -76,7 +76,7 @@ const BfpCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="age" value={age} onChange={(e) => setAge(e.target.value)} required />
+                                    <input className="form-control" type="text" id="age" placeholder="Enter Age" value={age} onChange={(e) => setAge(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -104,7 +104,7 @@ const BfpCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="height" value={height} onChange={(e) => setHeight(e.target.value)} required />
+                                    <input className="form-control" type="text" id="height" placeholder="Enter Height in cm" value={height} onChange={(e) => setHeight(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -116,7 +116,7 @@ const BfpCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="weight" value={weight} onChange={(e) => setWeight(e.target.value)} required />
+                                    <input className="form-control" type="text" id="weight" placeholder="Enter Weight in Kg" value={weight} onChange={(e) => setWeight(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -128,7 +128,7 @@ const BfpCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="neck" value={neck} onChange={(e) => setNeck(e.target.value)} required />
+                                    <input className="form-control" type="text" id="neck" placeholder="Enter Neck size in cm" value={neck} onChange={(e) => setNeck(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -140,7 +140,7 @@ const BfpCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="waist" value={waist} onChange={(e) => setWaist(e.target.value)} required />
+                                    <input className="form-control" type="text" id="waist" placeholder="Enter Waist size in cm" value={waist} onChange={(e) => setWaist(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -152,7 +152,7 @@ const BfpCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="hip" value={hip} onChange={(e) => setHip(e.target.value)} required />
+                                    <input className="form-control" type="text" id="hip" placeholder="Enter Hip size in cm" value={hip} onChange={(e) => setHip(e.target.value)} required />
                                 </div>
 
                             </div>

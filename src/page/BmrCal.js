@@ -68,7 +68,7 @@ const BmrCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="age" value={age} onChange={(e) => setAge(e.target.value)} required />
+                                    <input className="form-control" type="text" id="age" placeholder="Enter Age" value={age} onChange={(e) => setAge(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -96,7 +96,7 @@ const BmrCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="height" value={height} onChange={(e) => setHeight(e.target.value)} required />
+                                    <input className="form-control" type="text" id="height" placeholder="Enter Height in cm" value={height} onChange={(e) => setHeight(e.target.value)} required />
                                 </div>
 
                             </div>
@@ -108,7 +108,7 @@ const BmrCal = () => {
                                 </div>
 
                                 <div className="col m-2">
-                                    <input className="form-control" type="text" id="weight" value={weight} onChange={(e) => setWeight(e.target.value)} required />
+                                    <input className="form-control" type="text" id="weight" placeholder="Enter Weight in Kg" value={weight} onChange={(e) => setWeight(e.target.value)} required />
                                 </div>
 
                             </div>
